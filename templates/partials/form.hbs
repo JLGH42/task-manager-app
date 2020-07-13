@@ -1,0 +1,20 @@
+    <form class="form-inline" action="127.0.0.1:300/users/login" method="post">
+        <label class="sr-only" for="eMail">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+            </div>
+            <input type="email" name="email" class="form-control" id="eMail" placeholder="Email">
+        </div>
+
+        <label class="sr-only" for="pWord">Pass</label>
+        <input type="password" class="form-control mb-2 mr-sm-2" id="pWord" placeholder="Password">
+
+        <div class="form-check mb-2 mr-sm-2">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
