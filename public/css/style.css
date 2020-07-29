@@ -1,0 +1,39 @@
+.bg-img {
+    background-image: url('/images/bm_img-2.jpg');
+    /* Add the blur effect */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    z-index: -1;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    margin: 25px;
+}
+
+div.signupForm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.signupForm .input-group {
+    margin-top: 15px
+}
+
+div.signupForm .form-check {
+    justify-content: flex-end
+}
+
+div.signupForm .btn {
+    margin-left: 37%;
+    justify-content: center;
+}
+
+footer {
+    flex-shrink: 0;
+}

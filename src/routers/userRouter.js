@@ -8,6 +8,14 @@ const multer = require('multer');
 const sharp = require('sharp')
 const { signUp, deleteAcc } = require('../emails/accounts')
 
+router.get('/signup', (req, res) => {
+    res.render('index', {
+        name: req.body.name,
+        email: req.body.email,
+        age: req.body.age
+    })
+})
+
 router.post('/users', async(req, res) => {
     const user = new User(req.body); // create instance of a new user
     try {
@@ -20,9 +28,6 @@ router.post('/users', async(req, res) => {
     }
 })
 
-// router.get('/users/login', (req, res) => {
-//     res.render('index')
-// })
 
 router.post('/users/login', async(req, res) => {
     try {
