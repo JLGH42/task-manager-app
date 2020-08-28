@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", "Sans Serif";
+    color: bisque;
+}
+
+.navbar {
+    padding: 0.8em;
+    /*120pixels*/
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.1em !important;
+    color: bisque !important;
+}
+
+.navbar-brand:hover {
+    color: #f66 !important;
+}
+
+.nav-link {
+    font-size: 1.1em !important;
+    color: bisque !important;
+}
+
+.nav-link:hover {
+    color: #f66 !important;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.btn-primary {
+    background-color: #6648b1;
+    border: 1px solid #563d7c;
+}
+
+.btn-primary:hover {
+    background-color: #f66;
+    border: 1px solid #563d7c;
+}
+
+.jumbotron {
+    border-radius: 0;
+    padding: 1rem;
+}
+
+img.phone-notif {
+    padding-top: 1rem;
+    border-radius: 10px;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.welcome {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.welcome hr {
+    width: 50%;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.learn-more {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 2rem;
+}
+
+#fixed {
+    // background: url('../images/bm_img-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background: radial-gradient(circle at 30% -50%, #fdf497 0%, #10adab 15%, #042066 35%, #580db5 60%, #285aeb 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    // min-height: 500px;
+}
+
+#section-bg {
+    background-color: #17171e;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+#fixed-img {
+    background: url('../images/bm_img-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 500px;
+}
+
+.build {
+    padding: 4rem;
+}
+
+.mongodb,
+.hbs,
+.node {
+    margin: 1rem;
+}
+
+.social a {
+    font-size: 4.5em;
+    padding: 3rem;
+}
+
+.fa-linkedin-in {
+    border-radius: 8px;
+    color: #0e76a8;
+}
+
+.fa-google-plus-g {
+    border-radius: 8px;
+    color: #db4a39;
+}
+
+.fa-instagram {
+    border-radius: 8px;
+    color: #fff;
+    background: #d6249f;
+    background: radial-gradient( circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fa-youtube {
+    border-radius: 8px;
+    color: #c4302b;
+}
+
+.fa-twitter {
+    border-radius: 8px;
+    color: #00acee;
+}
+
+.fa-linkedin-in:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover,
+.fa-twitter:hover {
+    box-shadow: 10px 0px 5px slategray;
+}
+
+footer {
+    background-color: #17171e;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+footer a {
+    color: #d5d5d5;
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+hr.light-100 {
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Mobile first - uses max-width instead */
+
+@media (max-width: 992px) {
+    .social a {
+        font-size: 4em;
+        padding: 2rem;
+    }
+    .carousel-indicators {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 45%;
+    }
+    .carousel-caption h1 {
+        font-size: 350%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .carousel-caption h3 {
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: 0.2rem;
+    }
+    .carousel-caption .btn {
+        font-size: 95%;
+        padding: 8px 14px;
+    }
+    .display-4 {
+        font-size: 200%;
+    }
+    .social a {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+    .build {
+        padding: 0rem;
+    }
+    .mongodb,
+    .hbs,
+    .node {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        top: 25%;
+    }
+    .carousel-caption h1 {
+        font-size: 250%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .carousel-caption h3 {
+        font-size: 110%;
+        font-weight: 400;
+        padding-bottom: 0.2rem;
+    }
+    .carousel-caption .btn {
+        font-size: 90%;
+        padding: 4px 8px;
+    }
+    .jumbotron p.lead {
+        font-size: .9rem;
+    }
+    .display-4 {
+        font-size: 160%;
+    }
+    .social a {
+        font-size: 2rem;
+        padding: 0.7rem;
+    }
+    .carousel-caption .btn {
+        font-size: 90%;
+        padding: 4px 8px;
+    }
+    .jumbotron p.lead {
+        font-size: 0.9rem;
+    }
+    .display-4 {
+        font-size: 160%;
+    }
+    .social a {
+        font-size: 2rem;
+        padding: 0.7rem;
+    }
+}

@@ -23,7 +23,9 @@ app.use(bodyParser.json());
 // const loginRouter = require('./routers/login')
 const userRouter = require('./routers/userRouter')
 const taskRouter = require('./routers/taskRouter')
+const index = require('./routers/index')
 app.use(userRouter)
 app.use(taskRouter)
+app.use(index)
 
 app.listen(port, () => console.log(`Application running on Port ${port}`))

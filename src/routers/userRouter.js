@@ -8,7 +8,7 @@ const multer = require('multer');
 const sharp = require('sharp')
 const { signUp, deleteAcc } = require('../emails/accounts')
 
-router.get('/signup', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index', {
         name: req.body.name,
         email: req.body.email,

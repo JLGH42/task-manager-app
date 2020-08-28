@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node src/app.js",
-        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
+        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js -e hbs",
+        "compile": "sass public/_partials/index.scss public/css/style.css"
     },
     "author": "",
     "license": "ISC",
@@ -24,6 +25,9 @@
     },
     "devDependencies": {
         "env-cmd": "^10.1.0",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^4.1.0",
+        "node-sass": "^4.14.1",
         "nodemon": "^2.0.2"
     }
 }

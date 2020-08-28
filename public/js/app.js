@@ -1,6 +1,6 @@
 console.log('Script is being loaded into browser')
 
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 const fields = {
     name: document.querySelector('input#name').textContent,
     email: document.querySelector('input#email').textContent,
@@ -24,8 +24,21 @@ window.addEventListener("load", function() {
                 if (data.error) {
                     console.log('Error', data)
                 } else {
-                    console.log('Success:', data);
+                    console.log('Success:', data)
                 }
             })
     })
 });
+
+$('.login-form .form-toggle').on('click', function(e) {
+    console.log('CLICKED 1')
+    e.preventDefault()
+    $(this).parent().toggleClass('d-none')
+    $('.signUp-form').toggleClass('d-none')
+})
+$('.signUp-form .form-toggle').on('click', function(e) {
+    console.log('CLICKED 1')
+    e.preventDefault()
+    $(this).parent().toggleClass('d-none')
+    $('.login-form').toggleClass('d-none')
+})

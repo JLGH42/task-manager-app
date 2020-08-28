@@ -1,5 +1,21 @@
-<header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-blue bg-light">
-        <a class="navbar-brand" href="#">TM</a>
-    </nav>
-</header>
+<nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top" role="navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">TM</a>
+        {{!-- Options Button --}}
+            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                data-target="#navbar-collapse-main">
+                <span class="navbar-toggler-icon"></span>
+                {{!-- <span class="sr-only">Toggle navigation</span> --}}
+            </button>
+        {{!-- Collapse Options --}}
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Task Management</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

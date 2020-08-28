@@ -1,40 +1,55 @@
-<form class="row form-inline border-top-0 signupForm" action="/users" method="post">
-    <div class="col-6 signupForm">
-        <label class="sr-only" for="name">Name:</label>
-        <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-                <div class="input-group-text"></div>
+{{!-- register form --}}
+<div class="container-fluid">
+    <div class="row form-inline text-center" id="fixed">
+        <form class="col-xs-12 col-sm-10 col-md-10 col-lg-8 signUp-form" action="/users" method="post" id="section-bg">
+            <h1 class="display-2 text-center">TM</h1>
+            <label class="sr-only" for="name">Name:</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input name="name" class="form-control" id="name" placeholder="Name">
             </div>
-            <input name="name" class="form-control" id="name" placeholder="Name">
-        </div>
 
-        <label class="sr-only" for="age">Age</label>
-        <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-                <div class="input-group-text"></div>
+            <label class="sr-only" for="age">Age</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input name="age" class="form-control" id="age" placeholder="Age">
             </div>
-            <input name="age" class="form-control" id="age" placeholder="Age">
-        </div>
 
-        <label class="sr-only" for="email">Email</label>
-        <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-                <div class="input-group-text"></div>
+            <label class="sr-only" for="email">Email</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
             </div>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
-        </div>
 
-        <label class="sr-only" for="pWord">Password</label>
-        <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-                <div class="input-group-text"></div>
+            <label class="sr-only" for="pWord">Password</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input name="password" type="password" class="form-control" id="pWord" placeholder="Password">
             </div>
-            <input name="password" type="password" class="form-control" id="pWord" placeholder="Password">
-        </div>
-        <div class="form-check mb-2 mr-sm-2">
-            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-            <label class="form-check-label" for="inlineFormCheck">Remember me</label>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Create an Account</button>
+            <div class="form-check mb-2 mr-sm-2">
+                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                <label class="form-check-label float-right" for="inlineFormCheck">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Create an Account</button>
+            <p class="text-center">OR</p>
+            <button type="button" class="btn btn-primary mb-2 form-toggle">Login</button>
+        </form>
+
+        <form class="col-xs-12 col-sm-10 col-md-10 col-lg-8 d-none login-form" action="/users/login" method="post"
+            id="section-bg">
+            <h1 class="display-2 text-center">TM</h1>
+            <label class="sr-only" for="email">Email</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <label class="sr-only" for="pWord">Password</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <input name="password" type="password" class="form-control" id="pWord" placeholder="Password">
+            </div>
+            <div class="form-check mb-2 mr-sm-2">
+                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                <label class="form-check-label float-right" for="inlineFormCheck">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Login</button>
+            <p class="text-center">OR</p>
+            <button type="button" class="btn btn-primary mb-2 form-toggle">Sign up</button>
+        </form>
     </div>
-</form>
+</div>
+{{!-- login form --}}
