@@ -1,6 +1,6 @@
-{{!-- register form --}}
 <div class="container-fluid">
     <div class="row form-inline text-center" id="fixed">
+        {{!-- register form --}}
         <form class="col-xs-12 col-sm-10 col-md-10 col-lg-8 signUp-form" action="/users" method="post" id="section-bg">
             <h1 class="display-2 text-center">TM</h1>
             <label class="sr-only" for="name">Name:</label>
@@ -31,6 +31,7 @@
             <button type="button" class="btn btn-primary mb-2 form-toggle">Login</button>
         </form>
 
+        {{!-- login form --}}
         <form class="col-xs-12 col-sm-10 col-md-10 col-lg-8 d-none login-form" action="/users/login" method="post"
             id="section-bg">
             <h1 class="display-2 text-center">TM</h1>
@@ -52,4 +53,3 @@
         </form>
     </div>
 </div>
-{{!-- login form --}}

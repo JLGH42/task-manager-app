@@ -5,15 +5,20 @@ const User = require('../models/user');
 const Auth = require('../middleware/auth');
 
 const multer = require('multer');
-const sharp = require('sharp')
-const { signUp, deleteAcc } = require('../emails/accounts')
+const sharp = require('sharp');
+const { signUp, deleteAcc } = require('../emails/accounts');
 
 router.get('/', (req, res) => {
     res.render('index', {
         name: req.body.name,
         email: req.body.email,
-        age: req.body.age
+        age: req.body.age,
+        password: req.body.password
     })
+})
+
+router.get('/test', (req, res) => {
+    res.render('taskPage')
 })
 
 router.post('/users', async(req, res) => {
@@ -22,12 +27,11 @@ router.post('/users', async(req, res) => {
         await user.save()
         signUp(user.email, user.name)
         const token = await user.generateAuthToken()
-        res.status(201).send({ user, token })
+        res.status(201).render('taskPage', { user, token })
     } catch (e) {
         res.status(400).send(e)
     }
 })
-
 
 router.post('/users/login', async(req, res) => {
     try {
