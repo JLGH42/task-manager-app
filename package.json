@@ -4,9 +4,13 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node src/app.js",
-        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js -e hbs",
-        "compile": "sass public/_partials/index.scss public/css/style.css"
+        "start": "node src/index.js",
+        "dev": "env-cmd -f ./config/dev.env nodemon src/index.js -e hbs",
+        "compile": "sass public/_partials/index.scss public/css/style.css",
+        "test": "env-cmd -f ./config/test.env jest --watch"
+    },
+    "jest": {
+        "testEnvironment": "node"
     },
     "author": "",
     "license": "ISC",
@@ -15,6 +19,7 @@
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
+        "express-session": "^1.17.1",
         "hbs": "^4.1.1",
         "jsonwebtoken": "^8.5.1",
         "mongodb": "^3.5.4",
@@ -27,7 +32,9 @@
         "env-cmd": "^10.1.0",
         "gulp": "^4.0.2",
         "gulp-sass": "^4.1.0",
+        "jest": "^26.4.2",
         "node-sass": "^4.14.1",
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.2",
+        "supertest": "^6.0.1"
     }
 }
