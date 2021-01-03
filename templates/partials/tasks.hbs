@@ -28,46 +28,19 @@
             <h2><a href="" data-target="#sidebar" data-toggle="collapse" class="d-md-none text-center"><i
                         class="fa fa-bars"></i></a>Render tasks from Collection</h2>
             <div class="row">
+                {{#each tasks}}
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
+                            {{ userTasks }}
                             <a href="#" class="btn btn-primary">Button</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
-                    </div>
-                </div>
+                {{/each}}
             </div>
             {{> createTaskModal}}
         </div>

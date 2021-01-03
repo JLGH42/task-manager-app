@@ -5,13 +5,17 @@ const Task = require('../models/task');
 const Auth = require('../middleware/auth')
 
 router.post('/tasks', Auth, async(req, res) => {
+    var tasks = [];
     const task = new Task({
         ...req.body,
         owner: req.user._id
     })
+    if (typeof req.body.task_description != 'undefined') {
+        tasks.push({...req.body })
+    }
     try {
         await task.save()
-        res.status(201).send(task)
+        res.redirect(201, '/tasks')
     } catch (e) {
         res.status(500).send(e)
     }
@@ -46,7 +50,7 @@ router.get('/tasks', Auth, async(req, res) => {
                 sort
             }
         }).execPopulate()
-        res.status(200).send(req.user.userTasks)
+        res.status(200).render('taskPage', { userTasks: req.user.userTasks })
     } catch (e) {
         res.status(500).send(e)
     }
