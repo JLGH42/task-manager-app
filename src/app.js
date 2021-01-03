@@ -5,7 +5,6 @@ const path = require('path')
 require('./db/mongoose'); //executes file immediately
 
 const app = express();
-const port = process.env.PORT
 
 const viewsPath = path.join(__dirname, '../templates/views/')
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -16,11 +15,13 @@ app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(path.join(partialsPath))
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(bodyParser.json());
-// app.use(express.json())
 
-// const loginRouter = require('./routers/login')
+// app.use(express.json());
+
 const userRouter = require('./routers/userRouter')
 const taskRouter = require('./routers/taskRouter')
 const index = require('./routers/index')
@@ -28,4 +29,4 @@ app.use(userRouter)
 app.use(taskRouter)
 app.use(index)
 
-app.listen(port, () => console.log(`Application running on Port ${port}`))
+module.exports = app;
